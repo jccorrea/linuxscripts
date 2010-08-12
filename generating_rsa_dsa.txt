@@ -1,0 +1,30 @@
+--my hostname is xyz
+
+[oracle@xyz .ssh]$ ls -la
+total 24
+drwxr-xr-x 2 oracle oinstall 4096 Apr 14 09:02 .
+drwx------ 4 oracle oinstall 4096 Apr 14 09:02 ..
+-rw-r--r-- 1 oracle dba      1818 Apr 14 09:02 authorized_keys
+[oracle@xyz .ssh]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/oracle/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/oracle/.ssh/id_rsa.
+Your public key has been saved in /home/oracle/.ssh/id_rsa.pub.
+The key fingerprint is:
+2b:bd:44:f1:d2:82:93:2f:db:be:bf:d2:04:31:bb:f1 oracle@xyz
+[oracle@xyz .ssh]$ ssh-keygen -t dsa
+Generating public/private dsa key pair.
+Enter file in which to save the key (/home/oracle/.ssh/id_dsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/oracle/.ssh/id_dsa.
+Your public key has been saved in /home/oracle/.ssh/id_dsa.pub.
+The key fingerprint is:
+1d:af:5e:c1:aa:f5:a0:4c:52:22:7d:40:22:6d:c0:f0 oracle@xyz
+[oracle@xyz .ssh]$ 
+
+--just copy the rsa pub to the target host
+
+--don't forget the /etc/hosts
